@@ -11,12 +11,12 @@ fi
 #if a file name is passed in the command line use that, else use individual hosts
 if [ -e $1 ]; then
     for i in `cat $1`; do
-        host $i
+        host ${i}
 	echo
     done
 else
     for i; do
-        host $i
+        host ${i}
 	echo
     done
 fi
